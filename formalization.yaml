@@ -6,8 +6,8 @@ project:
   description: >-
     For a prime p = 5 (mod 8) let chi be the quartic Dirichlet character with chi(2) = i, with
     values in the Gaussian integers, and let C(p) = f + i e be the sum of chi(n) (-1)^floor(n^2/p)
-    over 0 < n < p/2. The development proves that f = (p-1)/4 (mod 4) for every such p and that
-    e = kappa (mod 4) for p > 5, where kappa is the sum of the Legendre symbols (n/p) over
+    over 0 < n < p/2. The development proves that f = (p-1)/4 (mod 4) and
+    e = kappa (mod 4) for every such p, where kappa is the sum of the Legendre symbols (n/p) over
     0 < n < p/4. The mechanism is a matching lemma: for sign functions sigma, tau and a bijection
     pi, the correlation sum sigma(x) tau(pi x) is congruent modulo 4 to the sum of the two
     marginals minus the number of terms, so it does not depend on pi. Along the way it proves the
@@ -124,8 +124,8 @@ fidelity:
     Characters are MulChar (ZMod p) GaussianInt of order 4; the normalization is the hypothesis
     chi 2 = gi with gi = <0, 1> in GaussianInt, and existence and uniqueness of such a character are
     proved separately. Least residues are ZMod.val. kappa is defined as the Legendre sum over
-    0 < n < p/4, not as h(-4p)/2. The real law is proved for every p = 5 (mod 8) and without the
-    normalization; the lag identity is proved without the normalization. In Theorem B the subgroup
+    0 < n < p/4, not as h(-4p)/2. Both laws of Theorem A and the lag identity are proved for every
+    p = 5 (mod 8); the real law and the lag identity are proved without the normalization. In Theorem B the subgroup
     is a Subgroup of (ZMod N)ˣ with decidable membership, the coset is the finite set of units u with
     x⁻¹ u in H, the band-parity sum runs over units, and the exponent e is even and nonzero.
 

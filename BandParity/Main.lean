@@ -163,7 +163,7 @@ lemma sq_bijOn_gi (hp8 : p % 8 = 5) :
   bijOn_of_injOn_card (sq_mapsTo_gi) (sq_injOn hχ hp8 gi_ne_zero)
     (by rw [card_cls hχ (by simp), card_cls hχ (by simp)])
 
-lemma two_mul_bijOn_gi (hp8 : p % 8 = 5) (hp5 : 5 < p) (hpin : χ 2 = gi) :
+lemma two_mul_bijOn_gi (hp8 : p % 8 = 5) (hpin : χ 2 = gi) :
     Set.BijOn (fun x : ZMod p => 2 * x) (cls χ gi : Set (ZMod p))
       (cls χ (-1) : Set (ZMod p)) :=
   bijOn_of_injOn_card (two_mul_mapsTo_gi hpin)
@@ -209,7 +209,7 @@ lemma quadraticChar_of_char_gi {x : ZMod p} (hx : x ≠ 0) (h : χ x = gi ∨ χ
 
 /-- **The lag identity.** Matching `2H` with `4H = -H` by multiplication by `2` has correlation
 exactly `κ`: `∑_{u ∈ 2H} s(u) s(2u) = κ`. -/
-theorem lag_identity' (hp8 : p % 8 = 5) (hp5 : 5 < p) :
+theorem lag_identity' (hp8 : p % 8 = 5) :
     ∑ u ∈ cls χ gi, parSign u * parSign (2 * u) = kappa p := by
   have hp2 : p ≠ 2 := by omega
   have hp4 : p % 4 = 1 := by omega
@@ -297,11 +297,11 @@ theorem bandSum_re_modEq' (hp8 : p % 8 = 5) :
   exact hm.trans hself.symm
 
 /-- **Theorem A, imaginary part.** `e ≡ κ (mod 4)`. -/
-theorem bandSum_im_modEq' (hp8 : p % 8 = 5) (hp5 : 5 < p) (hpin : χ 2 = gi) :
+theorem bandSum_im_modEq' (hp8 : p % 8 = 5) (hpin : χ 2 = gi) :
     (bandSum χ).im ≡ kappa p [ZMOD 4] := by
-  rw [bandSum_im' hχ hp8, ← lag_identity' hχ hp8 hp5]
+  rw [bandSum_im' hχ hp8, ← lag_identity' hχ hp8]
   exact matching_indep' (cls χ gi) (cls χ (-1)) _ _ (sq_bijOn_gi hχ hp8)
-    (two_mul_bijOn_gi hχ hp8 hp5 hpin) parSign parSign
+    (two_mul_bijOn_gi hχ hp8 hpin) parSign parSign
     (fun x _ => parSign_eq x) (fun x _ => parSign_eq x)
 
 /-! ### Coset parities and the Coordinate Congruence -/
@@ -381,7 +381,7 @@ theorem bandSum_im_modEq_coords' (hp8 : p % 8 = 5) (hp5 : 5 < p) (hpin : χ 2 = 
 /-- **Coordinate Congruence.** `κ ≡ Q + k + t (mod 4)`. -/
 theorem coordinate_congruence' (hp8 : p % 8 = 5) (hp5 : 5 < p) (hpin : χ 2 = gi) :
     kappa p ≡ Q p + k χ + t χ [ZMOD 4] :=
-  (bandSum_im_modEq' hχ hp8 hp5 hpin).symm.trans (bandSum_im_modEq_coords' hχ hp8 hp5 hpin)
+  (bandSum_im_modEq' hχ hp8 hpin).symm.trans (bandSum_im_modEq_coords' hχ hp8 hp5 hpin)
 
 end Quartic
 

@@ -9,7 +9,7 @@ For a prime `p ≡ 5 (mod 8)` let `χ` be the quartic character with `χ(2) = i`
 
 This repository proves:
 
-- **Theorem A.** `f ≡ Q (mod 4)` for every `p ≡ 5 (mod 8)`, and `e ≡ κ (mod 4)` for `p > 5`.
+- **Theorem A.** `f ≡ Q (mod 4)` and `e ≡ κ (mod 4)` for every `p ≡ 5 (mod 8)`.
 - **The matching lemma.** For signs `σ, τ = ± 1` and a bijection `π : X → Y`,
   `∑ σ(x) τ(π x) ≡ ∑ σ + ∑ τ - |X| (mod 4)`, so the residue does not depend on `π`.
 - **The lag identity.** `∑_{u ∈ 2H} s(u) s(2u) = κ` exactly, with `s(u) = (-1)^⟨u⟩` and `H` the

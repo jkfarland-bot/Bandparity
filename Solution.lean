@@ -78,9 +78,9 @@ theorem bandSum_im (hp8 : p % 8 = 5) :
   bandSum_im' hχ hp8
 
 /-- **The lag identity.** `∑_{u ∈ C_i} s(u) s(2u) = κ`. -/
-theorem lag_identity (hp8 : p % 8 = 5) (hp5 : 5 < p) :
+theorem lag_identity (hp8 : p % 8 = 5) :
     ∑ u ∈ cls χ gi, parSign u * parSign (2 * u) = kappa p :=
-  lag_identity' hχ hp8 hp5
+  lag_identity' hχ hp8
 
 /-- **Theorem A, real part.** `f ≡ Q (mod 4)`. -/
 theorem bandSum_re_modEq (hp8 : p % 8 = 5) :
@@ -88,9 +88,9 @@ theorem bandSum_re_modEq (hp8 : p % 8 = 5) :
   bandSum_re_modEq' hχ hp8
 
 /-- **Theorem A, imaginary part.** `e ≡ κ (mod 4)`. -/
-theorem bandSum_im_modEq (hp8 : p % 8 = 5) (hp5 : 5 < p) (hpin : χ 2 = gi) :
+theorem bandSum_im_modEq (hp8 : p % 8 = 5) (hpin : χ 2 = gi) :
     (bandSum χ).im ≡ kappa p [ZMOD 4] :=
-  bandSum_im_modEq' hχ hp8 hp5 hpin
+  bandSum_im_modEq' hχ hp8 hpin
 
 /-- **Exact coset parities.** `∑_{u ∈ H} s(u) = k + 2t` and `∑_{u ∈ 2H} s(u) = t - 2k`. -/
 theorem coset_parities (hp8 : p % 8 = 5) (hp5 : 5 < p) (hpin : χ 2 = gi) :
