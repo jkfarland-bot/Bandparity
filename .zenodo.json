@@ -1,0 +1,8 @@
+{
+  "title": "BandParity: a Lean 4 formalization of the band-parity sum of a quartic character",
+  "upload_type": "software",
+  "creators": [{ "name": "Farland, Joseph S." }],
+  "license": "Apache-2.0",
+  "keywords": ["Lean 4", "Mathlib", "quartic characters", "generalized Bernoulli numbers", "class numbers", "formal verification"],
+  "description": "Lean 4 / Mathlib formalization of J. S. Farland, The band-parity sum of a quartic character: two laws modulo four, formalized in Lean. For p = 5 (mod 8) and the quartic character with chi(2) = i, the band-parity sum C(p) = f + ie satisfies f = (p-1)/4 and e = kappa (mod 4); the matching lemma, the lag identity, the Coordinate Congruence and the odd-subgroup congruence for any odd modulus are also proved. No sorry, no native_decide; standard axioms only."
+}

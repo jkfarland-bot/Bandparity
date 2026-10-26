@@ -1,0 +1,214 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "BandParity: the band-parity sum of a quartic character, two laws modulo 4"
+  description: >-
+    For a prime p = 5 (mod 8) let chi be the quartic Dirichlet character with chi(2) = i, with
+    values in the Gaussian integers, and let C(p) = f + i e be the sum of chi(n) (-1)^floor(n^2/p)
+    over 0 < n < p/2. The development proves that f = (p-1)/4 (mod 4) for every such p and that
+    e = kappa (mod 4) for p > 5, where kappa is the sum of the Legendre symbols (n/p) over
+    0 < n < p/4. The mechanism is a matching lemma: for sign functions sigma, tau and a bijection
+    pi, the correlation sum sigma(x) tau(pi x) is congruent modulo 4 to the sum of the two
+    marginals minus the number of terms, so it does not depend on pi. Along the way it proves the
+    parity dictionary (-1)^floor(n^2/p) = s(n) s(n^2) with s(x) = (-1)^<x>, the coset form
+    f = sum over the fourth powers H of s(u) s(u^2) and e = the same sum over 2H, the lag identity
+    sum over 2H of s(u) s(2u) = kappa exactly, the exact coset parities sum_H s = k + 2t and
+    sum_{2H} s = t - 2k where B_{1,chi} = k + i t, and the Coordinate Congruence
+    kappa = (p-1)/4 + k + t (mod 4). It also proves the odd-subgroup congruence: for an odd modulus
+    N >= 3, a subgroup H of (Z/N)^x of odd order h, a coset X = xH and an even exponent e >= 2, the
+    band-parity sum of X and -X over (0, N/2) equals sum over X of s(u) s(u^e) and is congruent to
+    h - 2 alpha(X) - 2 alpha(X^e) modulo 4, where alpha counts elements with odd least residue.
+  authors:
+    - "Joseph S. Farland"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Joseph S. Farland"
+
+classification:
+  arxiv: ["math.NT"]
+  msc2020: ["11A15", "11L40", "11R29", "68V20"]
+
+sources:
+  - title: "The band-parity sum of a quartic character: two laws modulo four, formalized in Lean"
+    authors:
+      - "Joseph S. Farland"
+    type: "article"
+    location: "Preprint, Zenodo, 2026"
+    relationship: "formalizes"
+    note: >-
+      The paper and this formalization have the same author. Lemmas 3.1, 4.1 and 7.1,
+      Propositions 2.1(1), 4.2, 5.1 and 6.2, Theorems 6.1 (Theorem A) and 7.2 (Theorem B) and
+      Corollary 6.3 are formalized, together with the existence and uniqueness of the pin.
+      Proposition 2.1(2), the half-sum identity, is formalized in the development and used in the
+      proof of Proposition 6.2. The completeness computation of Section 8 is not formalized.
+      On novelty: the inputs are classical (the half-sum identity of Yamamoto and Barkan, the coset
+      sums of the quartic Bernoulli number); the Coordinate Congruence is implicit in Setzer's and
+      Hudson's quarter counts together with Dirichlet's formula. The author found the band-parity sum
+      and the two mod-4 laws nowhere in the literature searched (the parity of k-th powers modulo p,
+      the Lehmer problem and its character-twisted variants, Sun's and Petrov-Sun's sine products,
+      floor sums attached to class numbers, fractional parts of polynomials modulo p).
+    license: "CC-BY-4.0"
+    author_endorsement: "participated"
+  - title: "The coordinates of a quartic L-value: a formalized survey of the classical facts"
+    authors:
+      - "Joseph S. Farland"
+    id: "https://doi.org/10.5281/zenodo.23624516"
+    type: "article"
+    location: "Preprint, Zenodo, 2026, https://doi.org/10.5281/zenodo.23624516"
+    relationship: "background"
+    note: "The classical facts about the coordinates k and t of B_{1,chi}; its Lean files Basic, Pin, FixedBase and CosetSums are reused here."
+    license: "CC-BY-4.0"
+    author_endorsement: "participated"
+  - title: "Sur des sommes de caractères liées aux nombres de classes des corps abéliens imaginaires"
+    authors:
+      - "P. Barkan"
+    type: "article"
+    location: "C. R. Acad. Sci. Paris Sér. A-B 281 (1975), 887-890"
+    relationship: "background"
+    note: "The half-sum identity for odd characters of odd conductor, formula (2)."
+    license: "unknown"
+    author_endorsement: "n/a"
+  - title: "On the parity of k-th powers modulo p. A generalization of a problem of Lehmer"
+    authors:
+      - "J. Bourgain"
+      - "T. Cochrane"
+      - "J. Paulhus"
+      - "C. Pinner"
+    type: "article"
+    location: "Acta Arith. 147 (2011), 173-203"
+    relationship: "background"
+    note: "Theorem 1.3 gives the untwisted count behind the band weight."
+    license: "CC-BY-4.0"
+    author_endorsement: "n/a"
+
+related_formalizations:
+  - id: "https://doi.org/10.5281/zenodo.23624363"
+    relationship: "builds-on"
+    note: "KSurvey (QuarticSurvey), the formalized survey of the classical facts by the same author. Its files Basic, Pin, FixedBase and CosetSums are copied here, converted to the module system and renamed into the BandParity namespace."
+
+status:
+  scope: >-
+    Formalized: the matching lemma and its independence of the matching; the existence and
+    uniqueness of the quartic character with chi(2) = i; sum chi(n) n = p (k + i t) and the
+    oddness of k and t; the parity dictionary; the coset form of f and e; the lag identity; both
+    laws of Theorem A; the exact coset parities; the Coordinate Congruence in both forms; and, for
+    any odd modulus, the representative identity and the odd-subgroup congruence (Theorem B).
+    Not formalized: Dirichlet's identification kappa = h(-4p)/2, which is quoted only to interpret
+    kappa, and the finite computation showing that all eight residue patterns modulo 4 occur.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["Claude (Anthropic)"]
+      framework: "Claude.ai with code execution"
+      tool_setup: >-
+        AI-assisted: the Lean code was drafted and repaired by Claude against the paper's
+        statements and proofs, compiled locally with lake, and checked with Palomar's lake
+        comparator script. The mathematics, statements and paper are the author's.
+      cost:
+        wall_time: "about half a day"
+        spend_usd: "subscription-based"
+        hardware: "API-only plus local machine"
+      prompting_notes: "The model was given the paper's statements and proofs and asked to formalize them without sorry or native_decide."
+  spend_usd: "subscription-based"
+  notes: >-
+    The author chose the scope (the Theorem A core and Theorem B, with the completeness computation
+    left as a computation) and reviewed the formal statements in Challenge.lean against the paper.
+
+fidelity:
+  divergences: >-
+    Characters are MulChar (ZMod p) GaussianInt of order 4; the normalization is the hypothesis
+    chi 2 = gi with gi = <0, 1> in GaussianInt, and existence and uniqueness of such a character are
+    proved separately. Least residues are ZMod.val. kappa is defined as the Legendre sum over
+    0 < n < p/4, not as h(-4p)/2. The real law is proved for every p = 5 (mod 8) and without the
+    normalization; the lag identity is proved without the normalization. In Theorem B the subgroup
+    is a Subgroup of (ZMod N)ˣ with decidable membership, the coset is the finite set of units u with
+    x⁻¹ u in H, the band-parity sum runs over units, and the exponent e is even and nonzero.
+
+review:
+  status: "self-assessed"
+  reviewers:
+    - "Joseph S. Farland"
+  notes: >-
+    The author compared each statement in Challenge.lean with the corresponding result of the
+    paper. The definitions in Challenge.lean are copied verbatim from the development and compared
+    by Comparator. No external referee has reviewed the paper or the formalization.
+
+alignment:
+  namespace: "BandParity"
+  statements:
+    - source: "Lemma 3.1, matching lemma"
+      lean: "BandParity.matching"
+      module: "Challenge"
+      status: "proved"
+    - source: "Lemma 3.1, independence of the matching"
+      lean: "BandParity.matching_indep"
+      module: "Challenge"
+      status: "proved"
+    - source: "Section 2, the pin chi(2) = i"
+      lean: "BandParity.existsUnique_pinned"
+      module: "Challenge"
+      status: "proved"
+    - source: "Proposition 2.1(1), sum chi(n) n = p (k + i t)"
+      lean: "BandParity.T_eq"
+      module: "Challenge"
+      status: "proved"
+    - source: "Proposition 2.1(1), k is odd"
+      lean: "BandParity.odd_k"
+      module: "Challenge"
+      status: "proved"
+    - source: "Proposition 2.1(1), t is odd"
+      lean: "BandParity.odd_t"
+      module: "Challenge"
+      status: "proved"
+    - source: "Lemma 4.1, parity dictionary"
+      lean: "BandParity.neg_one_pow_band"
+      module: "Challenge"
+      status: "proved"
+      note: "Stated at a prime p; the version for any odd modulus is proved in BandParity/OddSubgroup.lean."
+    - source: "Proposition 4.2, coset form of f"
+      lean: "BandParity.bandSum_re"
+      module: "Challenge"
+      status: "proved"
+    - source: "Proposition 4.2, coset form of e"
+      lean: "BandParity.bandSum_im"
+      module: "Challenge"
+      status: "proved"
+    - source: "Proposition 5.1, lag identity"
+      lean: "BandParity.lag_identity"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 6.1 (Theorem A), real part"
+      lean: "BandParity.bandSum_re_modEq"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 6.1 (Theorem A), imaginary part"
+      lean: "BandParity.bandSum_im_modEq"
+      module: "Challenge"
+      status: "proved"
+    - source: "Proposition 6.2, coset parities"
+      lean: "BandParity.coset_parities"
+      module: "Challenge"
+      status: "proved"
+    - source: "Corollary 6.3, e = Q + k + t (mod 4)"
+      lean: "BandParity.bandSum_im_modEq_coords"
+      module: "Challenge"
+      status: "proved"
+    - source: "Corollary 6.3, Coordinate Congruence"
+      lean: "BandParity.coordinate_congruence"
+      module: "Challenge"
+      status: "proved"
+    - source: "Lemma 7.1, representative identity"
+      lean: "BandParity.cosetBandSum_eq"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 7.2 (Theorem B), odd-subgroup congruence"
+      lean: "BandParity.odd_subgroup_congruence"
+      module: "Challenge"
+      status: "proved"
+
+acknowledgements: "Lean 4 and Mathlib; Claude (Anthropic) for formalization assistance; the Palomar starter template for the check scripts."

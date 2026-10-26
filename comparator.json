@@ -1,0 +1,48 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "BandParity.matching",
+    "BandParity.matching_indep",
+    "BandParity.existsUnique_pinned",
+    "BandParity.neg_one_pow_band",
+    "BandParity.T_eq",
+    "BandParity.odd_k",
+    "BandParity.odd_t",
+    "BandParity.bandSum_re",
+    "BandParity.bandSum_im",
+    "BandParity.lag_identity",
+    "BandParity.bandSum_re_modEq",
+    "BandParity.bandSum_im_modEq",
+    "BandParity.coset_parities",
+    "BandParity.bandSum_im_modEq_coords",
+    "BandParity.coordinate_congruence",
+    "BandParity.cosetBandSum_eq",
+    "BandParity.odd_subgroup_congruence"
+  ],
+  "definition_names": [
+    "BandParity.gi",
+    "BandParity.cosetSum",
+    "BandParity.S",
+    "BandParity.k",
+    "BandParity.t",
+    "BandParity.T",
+    "BandParity.parSign",
+    "BandParity.band",
+    "BandParity.bandSum",
+    "BandParity.Q",
+    "BandParity.kappa",
+    "BandParity.cls",
+    "BandParity.uSign",
+    "BandParity.bandSignPow",
+    "BandParity.coset",
+    "BandParity.oddCount",
+    "BandParity.cosetBandSum"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

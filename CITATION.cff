@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "BandParity: a Lean 4 formalization of the band-parity sum of a quartic character"
+authors:
+  - family-names: Farland
+    given-names: Joseph S.
+version: v1.0
+date-released: 2026-10-26
+license: Apache-2.0
+repository-code: "https://github.com/jkfarland-bot/Bandparity"
+keywords:
+  - quartic characters
+  - generalized Bernoulli numbers
+  - class numbers
+  - Lean 4
+  - Mathlib
+  - formal verification
+preferred-citation:
+  type: article
+  title: "The band-parity sum of a quartic character: two laws modulo four, formalized in Lean"
+  authors:
+    - family-names: Farland
+      given-names: Joseph S.
+  year: 2026
+  notes: "Preprint, Zenodo"
