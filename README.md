@@ -24,7 +24,8 @@ This repository proves:
 - **Coset parities and the Coordinate Congruence.** `∑_H s = k + 2t`, `∑_{2H} s = t - 2k` where
   `B_{1,χ} = k + i t`, and `e ≡ κ ≡ Q + k + t (mod 4)`.
 - **Theorem B.** For any odd `N ≥ 3`, any subgroup `H ≤ (ℤ/N)ˣ` of odd order `h`, any coset `xH`
-  and any even `e ≥ 2`, the band-parity sum of `xH ∪ (-xH)` over `(0, N/2)` is
+  and any even `e ≥ 2`, the signed band-parity sum of `xH ∪ (-xH)` over `(0, N/2)` (sign `+1` on
+  `xH`, `-1` on `-xH`) is
   `≡ h - 2α(xH) - 2α((xH)^e) (mod 4)`, where `α` counts elements with odd least residue.
 
 `κ = h(-4p)/2` by Dirichlet's formula; that identification is quoted in the paper and not used
@@ -41,6 +42,45 @@ lake build
 
 No `sorry`, no `native_decide`. Every result depends only on `propext`, `Classical.choice` and
 `Quot.sound`.
+
+## Scope, hypotheses and limitations
+
+- Theorem A, the coset form and the lag identity hold for every prime `p ≡ 5 (mod 8)`, including
+  `p = 5`. The real law and the lag identity hold for either quartic character; the imaginary law
+  needs the normalization `χ(2) = i` (the other character turns `e` into `-e`).
+- Everything that involves `B_{1,χ} = k + i t` (`T_eq`, `odd_k`, `odd_t`, `coset_parities` and both
+  forms of the Coordinate Congruence) assumes `p > 5`. At `p = 5`, `∑ χ(n) n = -3 - i`, so
+  `B_{1,χ}` is not a Gaussian integer.
+- In Lean the imaginary coset form and the lag identity are stated over the class
+  `C_i = {x : χ x = i}`, which is `2H` under the normalization.
+- `κ` is defined as the Legendre sum. Dirichlet's identification `κ = h(-4p)/2` is not formalized
+  and is not used.
+- The compared parity dictionary `neg_one_pow_band` is the case of a prime modulus and exponent 2.
+  The version for any odd modulus and any exponent (`bandSignPow_eq`, `uSign_neg`) and the
+  half-sum identity (`half_sum`) are proved in the development but are not compared declarations.
+- In Theorem B the sums run over units of `ZMod N`, `(xH)^e` is the image set
+  `{u^e : u ∈ xH}`, and `e` is even and nonzero.
+- The paper's Section 8 computation (all eight residue patterns of `(Q, κ, k, t, f, e)` modulo 4
+  occur) is a finite computation and is not formalized.
+
+## Sources and novelty
+
+The inputs are classical: the half-sum identity of Yamamoto (quartic case) and Barkan (odd
+characters of odd conductor), the integrality and pairing of the coset sums and the oddness of `k`
+and `t`, all surveyed and formalized in KSurvey. The second form of the Coordinate Congruence is
+implicit in Setzer's and Hudson's quarter counts together with Dirichlet's formula. The author
+found neither the band-parity sum `𝒞(p)` nor any character sum weighted by `(-1)^⌊n²/p⌋` in the
+literature searched (listed in the paper and in `formalization.yaml`); novelty is claimed only
+relative to that search. The termwise identity behind the matching lemma,
+`ab ≡ a + b - 1 (mod 4)` for odd `a, b`, is folklore.
+
+## Authorship, AI assistance and licence
+
+The mathematics, the statements and the paper are by Joseph S. Farland. The Lean code was drafted
+and repaired by Claude (Anthropic) against the paper's statements and proofs; the author chose the
+scope and compared every statement in `Challenge.lean` with the paper. No external referee has
+reviewed the paper or the formalization. The code is released under the Apache License 2.0
+(`LICENSE`); the paper is CC BY 4.0.
 
 ## Layout for the Palomar registry
 
