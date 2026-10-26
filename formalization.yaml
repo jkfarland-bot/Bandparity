@@ -33,8 +33,9 @@ sources:
   - title: "The band-parity sum of a quartic character: two laws modulo four, formalized in Lean"
     authors:
       - "Joseph S. Farland"
+    id: "https://doi.org/10.5281/zenodo.23673418"
     type: "article"
-    location: "Preprint, Zenodo, 2026"
+    location: "Preprint, Zenodo, 2026, https://doi.org/10.5281/zenodo.23673419 (v1.0); all versions https://doi.org/10.5281/zenodo.23673418"
     relationship: "formalizes"
     note: >-
       The paper and this formalization have the same author. Lemmas 3.1, 4.1 and 7.1,
