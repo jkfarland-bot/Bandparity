@@ -5,6 +5,7 @@ authors:
   - family-names: Farland
     given-names: Joseph S.
 version: v1.0
+doi: 10.5281/zenodo.23673067
 date-released: 2026-10-26
 license: Apache-2.0
 repository-code: "https://github.com/jkfarland-bot/Bandparity"

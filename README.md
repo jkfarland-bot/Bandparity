@@ -1,7 +1,12 @@
 # BandParity
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23673067.svg)](https://doi.org/10.5281/zenodo.23673067)
+
 Lean 4 / Mathlib formalization accompanying J. S. Farland, *The band-parity sum of a quartic
 character: two laws modulo four, formalized in Lean* (preprint, Zenodo, 2026).
+
+Software archive: version v1.0 is [doi:10.5281/zenodo.23673068](https://doi.org/10.5281/zenodo.23673068);
+all versions are [doi:10.5281/zenodo.23673067](https://doi.org/10.5281/zenodo.23673067).
 
 For a prime `p ≡ 5 (mod 8)` let `χ` be the quartic character with `χ(2) = i` and put
 
