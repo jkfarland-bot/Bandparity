@@ -7,6 +7,9 @@ character: two laws modulo four, formalized in Lean* (preprint, Zenodo, 2026;
 v1.0 [doi:10.5281/zenodo.23673419](https://doi.org/10.5281/zenodo.23673419), all versions
 [doi:10.5281/zenodo.23673418](https://doi.org/10.5281/zenodo.23673418)).
 
+Registered at Palomar as [PALOMAR-2026-10-27-000018](https://palomar-registry.org/entry?id=PALOMAR-2026-10-27-000018&version=1)
+(commit `890a306`).
+
 Software archive: version v1.0 is [doi:10.5281/zenodo.23673068](https://doi.org/10.5281/zenodo.23673068);
 all versions are [doi:10.5281/zenodo.23673067](https://doi.org/10.5281/zenodo.23673067).
 
