@@ -2,7 +2,7 @@ module
 
 public import Mathlib
 
-public section
+@[expose] public section
 
 /-!
 # The band-parity sum of a quartic character: statements
