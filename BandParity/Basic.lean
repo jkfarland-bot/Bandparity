@@ -1,6 +1,8 @@
 module
 
-public import Mathlib
+public import Mathlib.NumberTheory.MulChar.Lemmas
+public import Mathlib.NumberTheory.Zsqrtd.GaussianInt
+public import Mathlib.NumberTheory.LegendreSymbol.QuadraticReciprocity
 
 @[expose] public section
 
