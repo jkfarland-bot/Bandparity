@@ -19,6 +19,11 @@ public import Mathlib.NumberTheory.LegendreSymbol.QuadraticReciprocity
 
 namespace BandParity
 
+/-- A prime is nonzero, as an instance. With this named instance, `Fintype (ZMod p)` and
+similar instances use a constant applied to variables, which Lean does not abstract into a
+file-local auxiliary lemma, so the definitions below elaborate identically in every file. -/
+instance neZero_of_fact_prime (p : ℕ) [hp : Fact p.Prime] : NeZero p := ⟨hp.out.ne_zero⟩
+
 /-- The Gaussian unit `i`. -/
 def gi : GaussianInt := ⟨0, 1⟩
 

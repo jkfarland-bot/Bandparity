@@ -20,25 +20,7 @@
     "BandParity.cosetBandSum_eq",
     "BandParity.odd_subgroup_congruence"
   ],
-  "definition_names": [
-    "BandParity.gi",
-    "BandParity.cosetSum",
-    "BandParity.S",
-    "BandParity.k",
-    "BandParity.t",
-    "BandParity.T",
-    "BandParity.parSign",
-    "BandParity.band",
-    "BandParity.bandSum",
-    "BandParity.Q",
-    "BandParity.kappa",
-    "BandParity.cls",
-    "BandParity.uSign",
-    "BandParity.bandSignPow",
-    "BandParity.coset",
-    "BandParity.oddCount",
-    "BandParity.cosetBandSum"
-  ],
+  "definition_names": [],
   "permitted_axioms": [
     "propext",
     "Quot.sound",
