@@ -4,6 +4,7 @@ title: "BandParity: a Lean 4 formalization of the band-parity sum of a quartic c
 authors:
   - family-names: Farland
     given-names: Joseph S.
+    orcid: "https://orcid.org/0009-0007-6809-804X"
 version: v1.1.1
 doi: 10.5281/zenodo.23673067
 date-released: 2026-11-20
@@ -22,6 +23,7 @@ preferred-citation:
   authors:
     - family-names: Farland
       given-names: Joseph S.
+      orcid: "https://orcid.org/0009-0007-6809-804X"
   year: 2026
   doi: 10.5281/zenodo.23673418
   publisher:

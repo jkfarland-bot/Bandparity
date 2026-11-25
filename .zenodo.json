@@ -3,7 +3,8 @@
   "upload_type": "software",
   "creators": [
     {
-      "name": "Farland, Joseph S."
+      "name": "Farland, Joseph S.",
+      "orcid": "0009-0007-6809-804X"
     }
   ],
   "license": "Apache-2.0",
@@ -24,10 +25,17 @@
       "resource_type": "publication-preprint"
     },
     {
-      "identifier": "10.5281/zenodo.23624363",
+      "identifier": "10.5281/zenodo.23624362",
       "relation": "references",
       "scheme": "doi",
       "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/jkfarland-bot/Bandparity",
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "resource_type": "software"
     }
-  ]
+  ],
+  "notes": "AI assistance: the Lean code in this record was drafted and repaired by Claude (Anthropic), an AI model, from the statements and proofs of the companion paper \"The band-parity sum of a quartic character: two laws modulo four, formalized in Lean\" (doi:10.5281/zenodo.23673418), and compiled locally with lake. Every proof is checked by the Lean kernel, and Comparator replays the solution against the statement file under the Lean, NanoDa and con-ron kernels. The author, Joseph S. Farland, chose the scope, directed the work, and is responsible for the contents. No external human reviewer has checked the formalization."
 }
